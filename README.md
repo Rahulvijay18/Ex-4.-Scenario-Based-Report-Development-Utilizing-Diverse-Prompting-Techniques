@@ -1,10 +1,37 @@
 # Ex-4.-Scenario-Based-Report-Development-Utilizing-Diverse-Prompting-Techniques
 Objective: The goal of this experiment is to design and develop an AI-powered chatbot that can handle customer inquiries, provide support, and improve customer experience in a retail environment. Create prompts using various AI prompting techniques to guide your experiment, data collection, analysis, and report creation.
 ## Aim: 
+To design and develop an AI-powered retail chatbot that leverages diverse prompting techniques to handle customer inquiries, provide accurate responses, improve task completion, and enhance overall customer satisfaction.
 ## Algorithm: 
+Algorithm: Retail Chatbot with Diverse Prompting Techniques
+
+1. Start
+2. Customer sends a query via chat interface
+3. Preprocess query:
+    a. Clean text
+    b. Detect intent (order tracking, product inquiry, complaint, return)
+4. Select prompting technique based on query type or system setting:
+    a. Zero-shot
+    b. Few-shot
+    c. Chain-of-Thought (CoT)
+    d. Role-based
+    e. Instruction-tuned
+    f. Retrieval-Augmented Generation (RAG)
+5. Generate AI response using selected prompting technique
+6. Check response confidence score
+7. If confidence >= threshold:
+       Deliver response to customer
+   Else:
+       Escalate query to human agent
+8. Log query, response, and metrics (accuracy, satisfaction, latency)
+9. Update knowledge base if necessary
+10. End
+
 ## Prompt:
+Generate a detailed report for designing and developing an AI-powered retail chatbot. The chatbot should handle customer inquiries, provide support, and improve customer experience. Include how to create and use prompts with various AI prompting techniques (Zero-shot, Few-shot, Chain-of-Thought, Role-based, Instruction-tuned, RAG) for the experiment. Provide sections on objective, methodology, system design, sample prompts, analysis, results, and conclusion.
+
+
 ## Output:
-# Ex-4: Scenario-Based Report Development Utilizing Diverse Prompting Techniques
 
 ## Objective
 
@@ -180,3 +207,5 @@ Prompting techniques significantly influence chatbot performance in retail:
 * Personalized responses using customer history
 
 ## Result:
+
+Thus, the experiment shows the retail chatbot effectively handles customer inquiries and improves satisfaction. Zero-shot was fastest but least accurate, while RAG with Instruction-tuned prompts achieved the highest accuracy and reliability. Role-based and Chain-of-Thought prompts enhanced empathy and reasoning, balancing performance across metrics.
