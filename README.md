@@ -166,6 +166,36 @@ Step 3: Return delivery status.
 | RAG                 | 95%          | 4.8                | 96%            | 3.0         | Highly factual, accurate | Infra complexity       |
 
 ---
+## Extended Prompting Techniques Comparison Table
+| Prompting Technique                      | Definition                                        | Strengths                                  | Weaknesses                  | Best Use Case               | Example Prompt                                         |
+| ---------------------------------------- | ------------------------------------------------- | ------------------------------------------ | --------------------------- | --------------------------- | ------------------------------------------------------ |
+| **Zero-Shot Prompting**                  | Model answers without examples.                   | Fast, simple.                              | Can produce vague results.  | FAQ Chatbots, General Q\&A. | “What is return policy?”                               |
+| **Few-Shot Prompting**                   | Provide a few examples before the actual task.    | Increases accuracy, reduces hallucination. | Needs curated examples.     | Customer service scripts.   | “Example: Q: Delivery delay → A: Apologize & explain…” |
+| **Chain-of-Thought (CoT)**               | Model shows reasoning step by step.               | Improves logical reasoning.                | Longer responses.           | Troubleshooting, Bug Fixes. | “Explain reasoning step-by-step before final answer.”  |
+| **Role-Based Prompting**                 | Assigns the AI a role (expert, assistant, etc.).  | Adds consistency, tone control.            | May be rigid.               | Retail support personas.    | “You are a friendly customer support agent…”           |
+| **Instruction-Tuned Prompting**          | Uses strict instructions with format constraints. | Structured output.                         | Needs precise design.       | Invoice generation, Logs.   | “Summarize order in 3 bullets, ≤50 words each.”        |
+| **RAG (Retrieval-Augmented Generation)** | Combines model with external knowledge.           | Very accurate, grounded.                   | Needs integration pipeline. | Product catalog queries.    | “Using product database, find warranty details.”       |
+
+## Customer Chatbot Use-Case Table
+
+| Use Case Scenario        | Description                             | Example Query                            | Expected Chatbot Action                    | Prompting Technique Used |
+| ------------------------ | --------------------------------------- | ---------------------------------------- | ------------------------------------------ | ------------------------ |
+| **Order Tracking**       | Customer wants shipment status.         | “Where is my order #1234?”               | Fetch tracking info & respond politely.    | RAG + Role-based         |
+| **Return/Refund Policy** | Customer asks about return eligibility. | “Can I return shoes after 20 days?”      | Explain rules with dates & steps.          | Zero/Few-shot            |
+| **Product Inquiry**      | Customer asks about stock/availability. | “Do you have size 42 sneakers?”          | Check DB, confirm availability.            | RAG                      |
+| **Complaint Handling**   | Customer upset with delayed delivery.   | “My order is late, this is frustrating!” | Apologize, explain reason, offer solution. | Role-based + CoT         |
+| **Recommendations**      | Suggest related products.               | “I bought a phone, suggest accessories.” | Suggest top 3 related products.            | Instruction-tuned        |
+
+## Chatbot Evaluation Criteria Table
+
+| Criteria              | Description                            | Measurement Method                          |
+| --------------------- | -------------------------------------- | ------------------------------------------- |
+| **Accuracy**          | Correctness of answers.                | Compare chatbot response with ground truth. |
+| **Response Time**     | Speed of reply.                        | Measure average latency (ms).               |
+| **User Satisfaction** | Customer rating of helpfulness.        | Post-chat survey (1–5 scale).               |
+| **Consistency**       | Maintaining same style/tone.           | Manual audit of transcripts.                |
+| **Adaptability**      | Ability to handle new/unseen queries.  | Stress-test with 50 unseen queries.         |
+| **Scalability**       | Handles multiple users simultaneously. | Load testing with 1k queries/min.           |
 
 ## 7. Observations
 
